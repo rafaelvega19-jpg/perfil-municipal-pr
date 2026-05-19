@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.4">
+<title>Perfil Municipal de Puerto Rico | Perfil Muncicipal Final</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_observablehq/theme-air,near-midnight.b050d634.css">
+<link rel="preload" as="style" href="./_observablehq/stdlib/inputs.f7bf0e12.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_observablehq/theme-air,near-midnight.b050d634.css">
+<link rel="stylesheet" type="text/css" href="./_observablehq/stdlib/inputs.f7bf0e12.css">
+<link rel="modulepreload" href="./_observablehq/client.bcff8533.js">
+<link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.277aeab8.js">
+<link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.17/a96a6bbb.js">
+<link rel="modulepreload" href="./_npm/topojson-client@3.1.0/edd9ee95.js">
+<link rel="modulepreload" href="./_npm/d3@7.9.0/66d82917.js">
+<link rel="modulepreload" href="./_npm/htl@0.3.1/72f4716c.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/inputs.31cd1366.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/9cffc2bd.js">
+<link rel="modulepreload" href="./_npm/isoformat@0.2.1/18cbf477.js">
+<link rel="modulepreload" href="./_npm/interval-tree-1d@1.0.4/53fe8176.js">
+<link rel="modulepreload" href="./_npm/d3-array@3.2.4/e93ca09f.js">
+<link rel="modulepreload" href="./_npm/d3-axis@3.0.0/0f2de24d.js">
+<link rel="modulepreload" href="./_npm/d3-brush@3.0.0/65eb105b.js">
+<link rel="modulepreload" href="./_npm/d3-chord@3.0.1/7ef8fb2e.js">
+<link rel="modulepreload" href="./_npm/d3-color@3.1.0/aeb57b94.js">
+<link rel="modulepreload" href="./_npm/d3-contour@4.0.2/1d2aed74.js">
+<link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/87adea64.js">
+<link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/9ba9c7f3.js">
+<link rel="modulepreload" href="./_npm/d3-drag@3.0.0/4202580c.js">
+<link rel="modulepreload" href="./_npm/d3-ease@3.0.1/cdd7e898.js">
+<link rel="modulepreload" href="./_npm/d3-fetch@3.0.1/b4e2ad9a.js">
+<link rel="modulepreload" href="./_npm/d3-force@3.0.0/5e804d15.js">
+<link rel="modulepreload" href="./_npm/d3-format@3.1.2/3785bf2d.js">
+<link rel="modulepreload" href="./_npm/d3-geo@3.1.1/40599fb3.js">
+<link rel="modulepreload" href="./_npm/d3-hierarchy@3.1.2/e49e792c.js">
+<link rel="modulepreload" href="./_npm/d3-interpolate@3.0.1/8d1e5425.js">
+<link rel="modulepreload" href="./_npm/d3-path@3.1.0/20d3f133.js">
+<link rel="modulepreload" href="./_npm/d3-polygon@3.0.1/7553081f.js">
+<link rel="modulepreload" href="./_npm/d3-quadtree@3.0.1/0dfd751c.js">
+<link rel="modulepreload" href="./_npm/d3-random@3.0.1/3c90ee06.js">
+<link rel="modulepreload" href="./_npm/d3-scale@4.0.2/720b7f0a.js">
+<link rel="modulepreload" href="./_npm/d3-scale-chromatic@3.1.0/ba24c2e7.js">
+<link rel="modulepreload" href="./_npm/d3-selection@3.0.0/4d94e5b7.js">
+<link rel="modulepreload" href="./_npm/d3-shape@3.2.0/6d3a6726.js">
+<link rel="modulepreload" href="./_npm/d3-time@3.1.0/9f03c579.js">
+<link rel="modulepreload" href="./_npm/d3-time-format@4.1.0/07c9626f.js">
+<link rel="modulepreload" href="./_npm/d3-timer@3.0.1/b58a267d.js">
+<link rel="modulepreload" href="./_npm/d3-transition@3.0.1/004da2ac.js">
+<link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/b5786b3f.js">
+<link rel="modulepreload" href="./_npm/binary-search-bounds@2.0.5/cbf6ba23.js">
+<link rel="modulepreload" href="./_npm/internmap@2.0.3/e08981d9.js">
+<link rel="modulepreload" href="./_npm/delaunator@5.1.0/d4ec0aa1.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@3.0.3/42820bfa.js">
+<link rel="icon" href="./_file/observable.1af93621.png" type="image/png" sizes="32x32">
+<script type="module">
+
+import {define} from "./_observablehq/client.bcff8533.js";
+import {registerFile} from "./_observablehq/stdlib.277aeab8.js";
+
+registerFile("./data/pr_78_municipios_anual_completo.csv", {"name":"./data/pr_78_municipios_anual_completo.csv","mimeType":"text/csv","path":"./_file/data/pr_78_municipios_anual_completo.1eddf5e9.csv","lastModified":1779053022366,"size":419577});
+registerFile("./data/pr_municipios_topo.json", {"name":"./data/pr_municipios_topo.json","mimeType":"application/json","path":"./_file/data/pr_municipios_topo.21e52c02.json","lastModified":1779053016715,"size":575194});
+
+define({id: "0179a107", outputs: ["Plot","topojson"], body: async () => {
+const [Plot, topojson] = await Promise.all([import("./_npm/@observablehq/plot@0.6.17/a96a6bbb.js"), import("./_npm/topojson-client@3.1.0/edd9ee95.js")]);
+
+return {Plot,topojson};
+}});
+
+define({id: "0ea7f52f", inputs: ["FileAttachment"], outputs: ["data","topo"], body: async (FileAttachment) => {
+const data = await FileAttachment("./data/pr_78_municipios_anual_completo.csv").csv({typed: true})
+const topo = await FileAttachment("./data/pr_municipios_topo.json").json()
+return {data,topo};
+}});
+
+define({id: "5f820afe", outputs: ["varLabels"], body: () => {
+const varLabels = {
+  poblacion: "Poblacion",
+  pct_poverty: "% Pobreza",
+  median_hh_income: "Ingreso Mediano",
+  pct_unemployment: "% Desempleo",
+  pct_bachelors_plus: "% Bachillerato",
+  median_age: "Edad Mediana",
+  densidad_pob_km2: "Densidad por km2"
+}
+return {varLabels};
+}});
+
+define({id: "e8db9fbf", inputs: ["view","Inputs"], outputs: ["año_sel"], body: (view,Inputs) => {
+const año_sel = view(Inputs.range([1970, 2025], {value: 2020, step: 1, label: "Año"}))
+return {año_sel};
+}});
+
+define({id: "109f3fe8", inputs: ["view","Inputs","varLabels"], outputs: ["variable_sel"], body: (view,Inputs,varLabels) => {
+const variable_sel = view(Inputs.select(
+  Object.keys(varLabels),
+  {value: "poblacion", label: "Variable", format: d => varLabels[d]}
+))
+return {variable_sel};
+}});
+
+define({id: "bde26b5b", inputs: ["data","año_sel","display","html"], outputs: ["snap","rico","pobre","poblado","decline"], body: (data,año_sel,display,html) => {
+const snap = data.filter(d => d.año === año_sel)
+
+const rico    = [...snap].sort((a, b) => b.median_hh_income - a.median_hh_income)[0]
+const pobre   = [...snap].sort((a, b) => b.pct_poverty - a.pct_poverty)[0]
+const poblado = [...snap].sort((a, b) => b.poblacion - a.poblacion)[0]
+
+const decline = data
+  .filter(d => d.año === 2000)
+  .map(d => {
+    const pop = snap.find(x => x.municipio === d.municipio)
+    return {...d, cambio: ((pop?.poblacion - d.poblacion) / d.poblacion * 100)}
+  })
+  .sort((a, b) => a.cambio - b.cambio)[0]
+
+display(html`
+  <div style="display:grid; grid-template-columns: repeat(4,1fr); gap:1rem; margin:1rem 0">
+    <div style="background:#1a1a2e; padding:1.2rem; border-radius:8px; border-left:4px solid #4caf50">
+      <div style="color:#aaa; font-size:0.8rem">Wealthiest</div>
+      <div style="font-size:1.4rem; font-weight:bold">${rico.municipio}</div>
+      <div style="color:#4caf50">$${rico.median_hh_income.toLocaleString()}</div>
+    </div>
+    <div style="background:#1a1a2e; padding:1.2rem; border-radius:8px; border-left:4px solid #f44336">
+      <div style="color:#aaa; font-size:0.8rem">Highest Poverty</div>
+      <div style="font-size:1.4rem; font-weight:bold">${pobre.municipio}</div>
+      <div style="color:#f44336">${pobre.pct_poverty}% poverty</div>
+    </div>
+    <div style="background:#1a1a2e; padding:1.2rem; border-radius:8px; border-left:4px solid #2196f3">
+      <div style="color:#aaa; font-size:0.8rem">Most Populated</div>
+      <div style="font-size:1.4rem; font-weight:bold">${poblado.municipio}</div>
+      <div style="color:#2196f3">${poblado.poblacion.toLocaleString()} residents</div>
+    </div>
+    <div style="background:#1a1a2e; padding:1.2rem; border-radius:8px; border-left:4px solid #ff9800">
+      <div style="color:#aaa; font-size:0.8rem">Biggest Decline</div>
+      <div style="font-size:1.4rem; font-weight:bold">${decline.municipio}</div>
+      <div style="color:#ff9800">${decline.cambio.toFixed(1)}% since 2000</div>
+    </div>
+  </div>
+`)
+return {snap,rico,pobre,poblado,decline};
+}});
+
+define({id: "3c17a82b", inputs: ["data","año_sel","variable_sel","display","Inputs"], outputs: ["snapshot"], body: (data,año_sel,variable_sel,display,Inputs) => {
+const snapshot = data
+  .filter(d => d.año === año_sel)
+  .sort((a, b) => b[variable_sel] - a[variable_sel])
+
+display(Inputs.table(snapshot, {
+  columns: ["municipio", "poblacion", "pct_poverty", "median_hh_income", "pct_unemployment", "pct_bachelors_plus", "median_age"],
+  header: {
+    municipio: "Municipio",
+    poblacion: "Poblacion",
+    pct_poverty: "% Pobreza",
+    median_hh_income: "Ingreso Mediano",
+    pct_unemployment: "% Desempleo",
+    pct_bachelors_plus: "% Bachillerato",
+    median_age: "Edad Mediana"
+  }
+}))
+return {snapshot};
+}});
+
+define({id: "25b110de", inputs: ["d3","snapshot","variable_sel","display","Plot","varLabels"], outputs: ["color78"], body: (d3,snapshot,variable_sel,display,Plot,varLabels) => {
+const color78 = d3.scaleSequential(
+  [d3.min(snapshot, d => d[variable_sel]), d3.max(snapshot, d => d[variable_sel])],
+  d3.interpolateRdYlGn
+)
+
+display(Plot.plot({
+  width: 800,
+  height: 1400,
+  marginLeft: 130,
+  x: { grid: true, label: varLabels[variable_sel] },
+  marks: [
+    Plot.barX(snapshot, {
+      x: variable_sel,
+      y: "municipio",
+      sort: { y: "-x" },
+      fill: d => color78(d[variable_sel]),
+      tip: true
+    }),
+    Plot.ruleX([0])
+  ]
+}))
+return {color78};
+}});
+
+define({id: "c1d8de44", inputs: ["snapshot","d3","variable_sel","display","Plot","varLabels"], outputs: ["top20","colorTop"], body: (snapshot,d3,variable_sel,display,Plot,varLabels) => {
+const top20 = snapshot.slice(0, 20)
+
+const colorTop = d3.scaleSequential(
+  [d3.min(top20, d => d[variable_sel]), d3.max(top20, d => d[variable_sel])],
+  d3.interpolateRdYlGn
+)
+
+display(Plot.plot({
+  width: 900,
+  height: 600,
+  marginLeft: 130,
+  marginRight: 150,
+  r: { range: [8, 30] },
+  x: { grid: true, type: "log", label: varLabels[variable_sel] },
+  marks: [
+    Plot.dot(top20, {
+      x: variable_sel,
+      y: "municipio",
+      sort: { y: "-x" },
+      r: variable_sel,
+      fill: d => colorTop(d[variable_sel]),
+      tip: true
+    }),
+    Plot.text(top20, {
+      x: variable_sel,
+      y: "municipio",
+      sort: { y: "-x" },
+      text: "municipio",
+      textAnchor: "start",
+      dx: 35
+    })
+  ]
+}))
+return {top20,colorTop};
+}});
+
+define({id: "46d7415b", inputs: ["view","Inputs","data"], outputs: ["municipios_sel"], body: (view,Inputs,data) => {
+const municipios_sel = view(Inputs.select(
+  [...new Set(data.map(d => d.municipio))].sort(),
+  {label: "Municipios", multiple: true, value: ["San Juan", "Bayamón", "Ponce", "Caguas", "Mayagüez"]}
+))
+return {municipios_sel};
+}});
+
+define({id: "778c134d", inputs: ["data","municipios_sel","display","Plot","varLabels","variable_sel"], outputs: ["filtered","censales"], body: (data,municipios_sel,display,Plot,varLabels,variable_sel) => {
+const filtered = data.filter(d => municipios_sel.includes(d.municipio))
+const censales = [1970, 1980, 1990, 2000, 2010, 2020]
+
+display(Plot.plot({
+  width: 800,
+  height: 400,
+  x: { label: "Año" },
+  y: { label: varLabels[variable_sel], grid: true },
+  color: { legend: true },
+  marks: [
+    Plot.lineY(filtered, {
+      x: "año",
+      y: variable_sel,
+      stroke: "municipio",
+      strokeWidth: 2,
+      tip: true
+    }),
+    Plot.dot(filtered.filter(d => censales.includes(d.año)), {
+      x: "año",
+      y: variable_sel,
+      fill: "municipio",
+      r: 4
+    })
+  ]
+}))
+return {filtered,censales};
+}});
+
+define({id: "b1525ffd", outputs: ["L"], body: async () => {
+const L = await import("https://esm.sh/leaflet@1.9.4")
+return {L};
+}});
+
+define({id: "729a9bf2", inputs: ["html","display"], body: async (html,display) => {
+display(await(
+html.fragment`<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">`
+))
+}});
+
+define({id: "f4315536", inputs: ["topojson","topo","data","año_sel","variable_sel","d3","display","html","L","varLabels"], outputs: ["features","mapSnap","values","lo","hi","getColor","div","map"], body: (topojson,topo,data,año_sel,variable_sel,d3,display,html,L,varLabels) => {
+const features = topojson.feature(topo, topo.objects.municipios)
+
+const mapSnap = new Map(
+  data.filter(d => d.año === año_sel).map(d => [d.municipio, d[variable_sel]])
+)
+
+const values = [...mapSnap.values()].filter(v => v != null)
+const lo = d3.min(values)
+const hi = d3.max(values)
+
+const getColor = val => {
+  if (val == null) return "#ccc"
+  const t = (val - lo) / (hi - lo)
+  return d3.interpolateYlOrRd(t)
+}
+
+const div = display(html`<div style="height:500px; width:100%"></div>`)
+
+const map = L.map(div).setView([18.2, -66.5], 9)
+
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution: "© OpenStreetMap"
+}).addTo(map)
+
+L.geoJSON(features, {
+  style: f => ({
+    fillColor: getColor(mapSnap.get(f.properties.municipio)),
+    fillOpacity: 0.75,
+    color: "white",
+    weight: 1
+  }),
+  onEachFeature: (f, layer) => {
+    const val = mapSnap.get(f.properties.municipio)
+    layer.bindTooltip(`<b>${f.properties.municipio}</b><br>${varLabels[variable_sel]}: ${val ?? "N/A"}`)
+  }
+}).addTo(map)
+return {features,mapSnap,values,lo,hi,getColor,div,map};
+}});
+
+define({id: "7f303c81", inputs: ["view","Inputs"], outputs: ["k"], body: (view,Inputs) => {
+const k = view(Inputs.range([2, 6], {value: 4, step: 1, label: "Numero de grupos"}))
+return {k};
+}});
+
+define({id: "ebee74e7", inputs: ["data","año_sel","d3","k","display","Plot"], outputs: ["clusterVars","clusterSnap","scaleVar","scaled","centers","clusterLabels","etiquetas","porIngreso","labelMap","clusters"], body: (data,año_sel,d3,k,display,Plot) => {
+const clusterVars = ["pct_poverty", "median_hh_income", "pct_unemployment", "pct_bachelors_plus", "median_age"]
+const clusterSnap = data.filter(d => d.año === año_sel && clusterVars.every(v => d[v] != null))
+
+const scaleVar = v => {
+  const lo = d3.min(clusterSnap, d => d[v])
+  const hi = d3.max(clusterSnap, d => d[v])
+  return d => (d[v] - lo) / (hi - lo)
+}
+
+const scaled = clusterSnap.map(d => clusterVars.map(v => scaleVar(v)(d)))
+
+let centers = d3.range(k).map(i => scaled[Math.floor(i * scaled.length / k)])
+let clusterLabels = scaled.map(() => 0)
+
+for (let i = 0; i < 30; i++) {
+  clusterLabels = scaled.map(p => d3.leastIndex(centers, c => d3.sum(p.map((v, j) => (v - c[j]) ** 2))))
+  centers = d3.range(k).map(ki => clusterVars.map((_, j) => d3.mean(scaled.filter((_, i) => clusterLabels[i] === ki), p => p[j])))
+}
+
+const etiquetas = ["Alta Pobreza", "Ingreso Medio-Bajo", "Ingreso Medio-Alto", "Alto Ingreso"]
+
+const porIngreso = d3.range(k)
+  .map(ki => ({ ki, avg: d3.mean(clusterSnap.filter((_, i) => clusterLabels[i] === ki), d => d.median_hh_income) }))
+  .sort((a, b) => a.avg - b.avg)
+
+const labelMap = Object.fromEntries(porIngreso.map((g, i) => [g.ki, etiquetas[Math.min(i, etiquetas.length - 1)]]))
+
+const clusters = clusterSnap.map((d, i) => ({...d, cluster: labelMap[clusterLabels[i]]}))
+
+display(Plot.plot({
+  width: 800,
+  height: 500,
+  color: { legend: true, label: "Grupo" },
+  x: { label: "Ingreso Mediano" },
+  y: { label: "% Pobreza" },
+  marks: [
+    Plot.dot(clusters, {
+      x: "median_hh_income",
+      y: "pct_poverty",
+      fill: "cluster",
+      r: 8,
+      fillOpacity: 0.8,
+      tip: true,
+      title: d => `${d.municipio} — ${d.cluster}`
+    }),
+    Plot.text(clusters, {
+      x: "median_hh_income",
+      y: "pct_poverty",
+      text: "municipio",
+      fontSize: 9,
+      dy: -10
+    })
+  ]
+}))
+return {clusterVars,clusterSnap,scaleVar,scaled,centers,clusterLabels,etiquetas,porIngreso,labelMap,clusters};
+}});
+
+define({id: "c399f7b5", inputs: ["data","año_sel","d3","varLabels","display","Plot"], outputs: ["corrVars","corrSnap","corr","pairs"], body: (data,año_sel,d3,varLabels,display,Plot) => {
+const corrVars = ["pct_poverty", "median_hh_income", "pct_unemployment", "pct_bachelors_plus", "median_age"]
+const corrSnap = data.filter(d => d.año === año_sel && corrVars.every(v => d[v] != null))
+
+const corr = (a, b) => {
+  const xa = corrSnap.map(d => d[a])
+  const xb = corrSnap.map(d => d[b])
+  const ma = d3.mean(xa)
+  const mb = d3.mean(xb)
+  const num = d3.sum(xa.map((v, i) => (v - ma) * (xb[i] - mb)))
+  const den = Math.sqrt(d3.sum(xa.map(v => (v - ma) ** 2)) * d3.sum(xb.map(v => (v - mb) ** 2)))
+  return num / den
+}
+
+const pairs = corrVars.flatMap(a => corrVars.map(b => ({
+  a: varLabels[a],
+  b: varLabels[b],
+  r: corr(a, b)
+})))
+
+display(Plot.plot({
+  width: 550,
+  height: 550,
+  marginBottom: 80,
+  marginLeft: 120,
+  color: { scheme: "RdBu", domain: [-1, 1], legend: true },
+  marks: [
+    Plot.cell(pairs, { x: "a", y: "b", fill: "r", tip: true }),
+    Plot.text(pairs, { x: "a", y: "b", text: d => d.r.toFixed(2), fontSize: 11 })
+  ]
+}))
+return {corrVars,corrSnap,corr,pairs};
+}});
+
+define({id: "d140c8e3", inputs: ["display","html"], body: (display,html) => {
+display(html`
+  <div style="display:grid; grid-template-columns: repeat(2,1fr); gap:1rem; margin:1rem 0">
+    <div style="background:#1a1a2e; padding:1.5rem; border-radius:8px; border-left:4px solid #4caf50">
+      <div style="font-size:1rem; font-weight:bold; margin-bottom:0.5rem">Desigualdad economica marcada</div>
+      <div style="color:#aaa; font-size:0.9rem">Existe un gap significativo entre municipios como Guaynabo y Dorado versus Las Marias y Maricao. El ingreso mediano puede variar hasta 4 veces entre municipios.</div>
+    </div>
+    <div style="background:#1a1a2e; padding:1.5rem; border-radius:8px; border-left:4px solid #f44336">
+      <div style="font-size:1rem; font-weight:bold; margin-bottom:0.5rem">Despoblacion generalizada</div>
+      <div style="color:#aaa; font-size:0.9rem">Puerto Rico ha perdido una poblacion significativa desde el 2000. Municipios del Sur como Guanica y Utuado muestran los mayores decrementos.</div>
+    </div>
+    <div style="background:#1a1a2e; padding:1.5rem; border-radius:8px; border-left:4px solid #2196f3">
+      <div style="font-size:1rem; font-weight:bold; margin-bottom:0.5rem">Educacion e ingreso van juntos</div>
+      <div style="color:#aaa; font-size:0.9rem">Los municipios con mayor porcentaje de bachillerato tienen consistentemente mayor ingreso mediano. La correlacion entre estas dos variables es de las mas fuertes del dataset.</div>
+    </div>
+    <div style="background:#1a1a2e; padding:1.5rem; border-radius:8px; border-left:4px solid #ff9800">
+      <div style="font-size:1rem; font-weight:bold; margin-bottom:0.5rem">Cuatro perfiles municipales</div>
+      <div style="color:#aaa; font-size:0.9rem">El clustering revela cuatro grupos claros: municipios de alto ingreso, ingreso medio-alto, ingreso medio-bajo y alta pobreza. Cada grupo tiene caracteristicas socioeconomicas consistentes.</div>
+    </div>
+  </div>
+`)
+}});
+
+</script>
+</head>
+<body>
+<input id="observablehq-sidebar-toggle" type="checkbox" title="Toggle sidebar">
+<label id="observablehq-sidebar-backdrop" for="observablehq-sidebar-toggle"></label>
+<nav id="observablehq-sidebar">
+  <ol>
+    <label id="observablehq-sidebar-close" for="observablehq-sidebar-toggle"></label>
+    <li class="observablehq-link observablehq-link-active"><a href="./">Perfil Muncicipal Final</a></li>
+  </ol>
+  <ol>
+    <li class="observablehq-link"><a href="./example-dashboard">Example dashboard</a></li>
+    <li class="observablehq-link"><a href="./example-report">Example report</a></li>
+  </ol>
+</nav>
+<script>{const e=document.querySelector("#observablehq-sidebar"),o=document.querySelector("#observablehq-sidebar-toggle"),r=sessionStorage.getItem("observablehq-sidebar");r?o.checked=r==="true":o.indeterminate=!0;for(const t of document.querySelectorAll("#observablehq-sidebar summary")){const s=t.parentElement;switch(sessionStorage.getItem(`observablehq-sidebar:${t.textContent}`)){case"true":s.open=!0;break;case"false":s.classList.contains("observablehq-section-active")||(s.open=!1);break}}addEventListener("beforeunload",()=>sessionStorage.setItem("observablehq-sidebar-scrolly",`${e.scrollTop}`));const a=sessionStorage.getItem("observablehq-sidebar-scrolly");a!=null&&(e.style.cssText="overflow: hidden;",e.scrollTop=+a,e.style.cssText="");}</script>
+<div id="observablehq-center">
+<aside id="observablehq-toc" data-selector="h1:not(:first-of-type)[id], h2:first-child[id], :not(h1) + h2[id]">
+<nav>
+<div>Contents</div>
+<ol>
+<li class="observablehq-secondary-link"><a href="#controles-globales">Controles globales</a></li>
+<li class="observablehq-secondary-link"><a href="#resumen">Resumen</a></li>
+<li class="observablehq-secondary-link"><a href="#tabla-comparativa">Tabla Comparativa</a></li>
+<li class="observablehq-secondary-link"><a href="#ranking-de-78-municipios">Ranking de 78 Municipios</a></li>
+<li class="observablehq-secondary-link"><a href="#top-20-bubble-chart">Top 20 — Bubble Chart</a></li>
+<li class="observablehq-secondary-link"><a href="#lineas-de-tiempo">Lineas de Tiempo</a></li>
+<li class="observablehq-secondary-link"><a href="#mapa-coropletico">Mapa Coropletico</a></li>
+<li class="observablehq-secondary-link"><a href="#mapa-coropletico-1">Mapa Coropletico</a></li>
+<li class="observablehq-secondary-link"><a href="#clustering-de-municipios">Clustering de Municipios</a></li>
+<li class="observablehq-secondary-link"><a href="#correlaciones-entre-variables">Correlaciones entre Variables</a></li>
+<li class="observablehq-secondary-link"><a href="#conclusiones">Conclusiones</a></li>
+</ol>
+</nav>
+</aside>
+<main id="observablehq-main" class="observablehq">
+<h1 id="perfil-municipal-de-puerto-rico" tabindex="-1"><a class="observablehq-header-anchor" href="#perfil-municipal-de-puerto-rico">Perfil Municipal de Puerto Rico</a></h1>
+<h3 id="rafael-e-vega-rodriguez" tabindex="-1"><a class="observablehq-header-anchor" href="#rafael-e-vega-rodriguez">Rafael E Vega Rodriguez</a></h3>
+<p>COMP4010</p>
+<div class="observablehq observablehq--block"><!--:0179a107:--></div>
+<div class="observablehq observablehq--block"><!--:0ea7f52f:--></div>
+<div class="observablehq observablehq--block"><!--:5f820afe:--></div>
+<hr>
+<h2 id="controles-globales" tabindex="-1"><a class="observablehq-header-anchor" href="#controles-globales">Controles globales</a></h2>
+<div class="observablehq observablehq--block"><!--:e8db9fbf:--></div>
+<div class="observablehq observablehq--block"><!--:109f3fe8:--></div>
+<hr>
+<h2 id="resumen" tabindex="-1"><a class="observablehq-header-anchor" href="#resumen">Resumen</a></h2>
+<div class="observablehq observablehq--block"><!--:bde26b5b:--></div>
+<hr>
+<h2 id="tabla-comparativa" tabindex="-1"><a class="observablehq-header-anchor" href="#tabla-comparativa">Tabla Comparativa</a></h2>
+<p>Compara los 78 municipios en indicadores demograficos y socioeconomicos. Presiona en cualquier columna para ordenar.</p>
+<div class="observablehq observablehq--block"><!--:3c17a82b:--></div>
+<hr>
+<h2 id="ranking-de-78-municipios" tabindex="-1"><a class="observablehq-header-anchor" href="#ranking-de-78-municipios">Ranking de 78 Municipios</a></h2>
+<p>Los 78 municipios ordenados por la variable seleccionada. Verde indica mejor desempeno, rojo indica peor.</p>
+<div class="observablehq observablehq--block"><!--:25b110de:--></div>
+<hr>
+<h2 id="top-20-bubble-chart" tabindex="-1"><a class="observablehq-header-anchor" href="#top-20-bubble-chart">Top 20 — Bubble Chart</a></h2>
+<p>Los 20 municipios con mayor valor de la variable seleccionada.</p>
+<div class="observablehq observablehq--block"><!--:c1d8de44:--></div>
+<hr>
+<h2 id="lineas-de-tiempo" tabindex="-1"><a class="observablehq-header-anchor" href="#lineas-de-tiempo">Lineas de Tiempo</a></h2>
+<p>Evolucion de cualquier variable desde 1950 hasta 2025. Los puntos marcan anos censales reales.</p>
+<div class="observablehq observablehq--block"><!--:46d7415b:--></div>
+<div class="observablehq observablehq--block"><!--:778c134d:--></div>
+<hr>
+<h2 id="mapa-coropletico" tabindex="-1"><a class="observablehq-header-anchor" href="#mapa-coropletico">Mapa Coropletico</a></h2>
+<p>Distribucion geografica de la variable seleccionada en Puerto Rico.</p>
+<h2 id="mapa-coropletico-1" tabindex="-1"><a class="observablehq-header-anchor" href="#mapa-coropletico-1">Mapa Coropletico</a></h2>
+<p>Distribucion geografica de la variable seleccionada en Puerto Rico.</p>
+<div class="observablehq observablehq--block"><!--:b1525ffd:--></div>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:729a9bf2:--></div>
+<div class="observablehq observablehq--block"><!--:f4315536:--></div>
+<hr>
+<h2 id="clustering-de-municipios" tabindex="-1"><a class="observablehq-header-anchor" href="#clustering-de-municipios">Clustering de Municipios</a></h2>
+<p>Municipios agrupados por similitud socioeconomica usando k-means. Cada color representa un grupo distinto.</p>
+<div class="observablehq observablehq--block"><!--:7f303c81:--></div>
+<div class="observablehq observablehq--block"><!--:ebee74e7:--></div>
+<hr>
+<h2 id="correlaciones-entre-variables" tabindex="-1"><a class="observablehq-header-anchor" href="#correlaciones-entre-variables">Correlaciones entre Variables</a></h2>
+<p>Que tan fuerte es la relacion entre cada par de variables. Azul significa que se mueven juntas, rojo que se mueven en direcciones opuestas.</p>
+<div class="observablehq observablehq--block"><!--:c399f7b5:--></div>
+<h2 id="conclusiones" tabindex="-1"><a class="observablehq-header-anchor" href="#conclusiones">Conclusiones</a></h2>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:d140c8e3:--></div>
+<p><em>Todo fue hecho con D3 de observable frameworks</em></p>
+<hr>
+<p><em>Rafael E Vega Rodriguez · COMP4010 · Universidad de Puerto Rico</em></p>
+</main>
+<footer id="observablehq-footer">
+<nav><a rel="next" href="./example-dashboard"><span>Example dashboard</span></a></nav>
+<div>Rafael E Vega Rodriguez · COMP4010 · Universidad de Puerto Rico</div>
+</footer>
+</div>
+</body>
+</html>
